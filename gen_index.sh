@@ -4,20 +4,31 @@
 
 rm index.html
 touch index.html
-echo "<style>        
+printf "<!DOCTYPE html>
+<head>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<style>
+html,body{
+    margin: 0;
+    padding: 1rem;
+}
 *{
-    font-family: sans-serif;  
-}         
-li {                           
-    font-size: x-large;        
-}                             
+    font-family: sans-serif;
+}
+li {
+    font-size: x-large;
+}
 </style>
+</head>
 
+<body>
 <h2> Programs: </h2>
-<ul>" >> index.html
+<ul>\n" >> index.html
 
 for dir in */; do
-    echo "<li><a href='./${dir}'> ${dir%/} </a></li>" >> index.html
+    printf "  <li><a href='./${dir}'>" >> index.html
+    printf "${dir%/}" | sed -r 's/(^|_)(\w)/\U \2/g' >> index.html
+    printf "</a></li>\n" >> index.html
 done
 
-echo "</ul>" >> index.html
+printf "</ul>\n</body>" >> index.html
