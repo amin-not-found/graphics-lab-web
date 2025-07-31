@@ -4,24 +4,37 @@
 <style>
 html,body{
     margin: 0;
-    padding: 1rem;
+    padding: 0.75rem;
 }
 *{
     font-family: sans-serif;
 }
 li {
-    font-size: x-large;
+    font-size: larger;
+}
+a {
+    text-decoration: none;
+}
+a:hover, a:focus {
+    text-decoration: underline;
+}
+.description {
+    font-size: 0.8em;
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+    padding-left: 1em;
 }
 </style>
 </head>
 
 <body>
-<h2> Programs: </h2>
+<h2> Graphics Lab Programs: </h2>
 <ul>
-  <li><a href='./cart_pole_PID/'> Cart Pole PID</a></li>
-  <li><a href='./cloth_2d/'> Cloth 2d</a></li>
-  <li><a href='./game_of_life/'> Game Of Life</a></li>
-  <li><a href='./monte_carlo_pi/'> Monte Carlo Pi</a></li>
-  <li><a href='./n_body/'> N Body</a></li>
+  <li><a tabindex='0' href='./cart_pole_PID'>Cart Pole PID</a><p class="description">Cart-Pole stabilization simulation with PID controller</p></li>
+  <li><a tabindex='0' href='./cloth_2d'>Cloth 2d</a><p class="description">2D cloth simulation using particles with spring forces</p></li>
+  <li><a tabindex='0' href='./eight_ball'>Eight Ball</a><p class="description">8 Ball pool</p></li>
+  <li><a tabindex='0' href='./game_of_life'>Game Of Life</a><p class="description">Conway's Game Of Life</p></li>
+  <li><a tabindex='0' href='./monte_carlo_pi'>Monte Carlo Pi</a><p class="description">Estimating value of PI using Monte Carlo's Method</p></li>
+  <li><a tabindex='0' href='./n_body'>N Body</a><p class="description">N-Body physics simulation</p></li>
 </ul>
 </body>
